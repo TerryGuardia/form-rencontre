@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo HTML Formulaire - Site de rencontre</title>
+    <style>
+        form {
+            width: 500px;
+        }
+        div {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="lname">Nom : </label>
+                <input type="text" name="lname" id="lname" minlength="2" maxlength="45" pattern="^[^0-9]+$">
+                <label for="fname">Prénom : </label>
+                <input type="text" name="fname" id="fname" minlength="2" maxlength="45" pattern="^[^0-9]+$">
+            </div>
+            <label for="mail">Adresse Email : </label>
+            <input type="email" name="mail" id="mail" pattern="^[a-zA-Z0-9.!#$%&’*+=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[com|org|net|fr]{2,3}+$">
+            <div>
+                Sexe :
+                <label for="f">Féminin</label>
+                <input type="radio" name="sexe" id="f" checked>
+                <label for="m">Masculin</label>
+                <input type="radio" name="sexe" id="m">
+            </div>
+            <input type="file" name="mon-fichier" accept=".png, .jpeg">
+            <div>
+                <select name="pays" id="pays">
+                    <option value="fr">FRANCE</option>
+                    <option value="en">ANGLETERRE</option>
+                    <option value="de" selected>ALLEMAGNE</option>
+                    <option value="it">ITALIE</option>
+                    <option value="ch">SUISSE</option>
+                    <option value="es">ESPAGNE</option>
+                </select>
+                <select name="langages" id="langages" multiple>
+                    <option value="fr">FRANCE</option>
+                    <option value="en">ANGLETERRE</option>
+                    <option value="de">ALLEMAGNE</option>
+                    <option value="it">ITALIE</option>
+                    <option value="ch">SUISSE</option>
+                    <option value="es">ESPAGNE</option>
+                </select>
+            </div>
+            <div>
+                <input type="checkbox" name="a1">Plombier
+                <input type="checkbox" name="a2">Électricien
+                <input type="checkbox" name="a3">Maçon
+                <br>
+                <input type="checkbox" name="a4">Carreleur
+                <input type="checkbox" name="a5">Menuisier
+                <input type="checkbox" name="a6">Couvreur
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
